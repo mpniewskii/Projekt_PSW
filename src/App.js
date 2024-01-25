@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/NavBar';
+import AddReviewForm from './components/AddReviewForm';
+import AddRoomForm from './components/AddRoomForm';
+import CommentForm from './components/CommentForm';
+import LoginForm from './components/LoginForm';
+import PostList from './components/PostList';
+import RegisterForm from './components/RegisterForm';
+import ChatRoom from './components/ChatRooms';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<PostList />} />
+        <Route path="/add-review" element={<AddReviewForm />} />
+        <Route path="/add-room" element={<AddRoomForm />} />
+        <Route path="/comment" element={<CommentForm />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/chatroom" element={<ChatRoom />} /> {/* Dodaj trasę do ChatRoom */}
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
