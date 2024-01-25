@@ -21,3 +21,41 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/.git
+
+# Ignore log files
+*.log
+
+# Ignore IDE specific temporary files
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.temp
+
+# Ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# Ignore application generated files
+application.log
+
+# Ignore cache files
+*.cache
+*.cached
+
+# Ignore other temporary files
+*.tmp
+*.temp
+*.o
+*.obj
+*.map
+*.state
+
+# Ignore directories
+tmp/
+temp/
+obj/
+dist/
+cache/
